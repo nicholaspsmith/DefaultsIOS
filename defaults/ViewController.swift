@@ -20,6 +20,13 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func red(sender: AnyObject) {
+    }
 
+    @IBAction func yellow(sender: AnyObject) {
+    }
+    
+    @IBAction func blue(sender: AnyObject) {
+    }
 }
 

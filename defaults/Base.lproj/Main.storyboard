@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="defaults" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,55 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgD-e5-sJS">
+                                <rect key="frame" x="211" y="126" width="178" height="57"/>
+                                <color key="backgroundColor" red="1" green="0.28871850479882388" blue="0.38040609100759226" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="5PU-JV-gKu"/>
+                                    <constraint firstAttribute="width" constant="178" id="K1c-M9-sKv"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="red:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Whs-cp-O1k"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RLB-EI-F3h">
+                                <rect key="frame" x="211" y="207" width="178" height="57"/>
+                                <color key="backgroundColor" red="1" green="0.84764480258880803" blue="0.25859363255789924" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="MKB-Zc-vfN"/>
+                                    <constraint firstAttribute="width" constant="178" id="gjA-Hc-9FW"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="yellow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="620-8b-egD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQb-5t-yEw">
+                                <rect key="frame" x="211" y="289" width="178" height="57"/>
+                                <color key="backgroundColor" red="0.49376450119730941" green="0.78868405357512894" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="178" id="AzX-8L-dxb"/>
+                                    <constraint firstAttribute="height" constant="57" id="PRz-W9-XWZ"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="blue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hEi-hL-B7L"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eQb-5t-yEw" firstAttribute="top" secondItem="RLB-EI-F3h" secondAttribute="bottom" constant="25" id="Ky0-1d-PQ0"/>
+                            <constraint firstItem="RLB-EI-F3h" firstAttribute="top" secondItem="dgD-e5-sJS" secondAttribute="bottom" constant="24" id="SB5-R9-jFd"/>
+                            <constraint firstItem="eQb-5t-yEw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VzI-8e-rc8"/>
+                            <constraint firstItem="dgD-e5-sJS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="q7M-vc-zyB"/>
+                            <constraint firstItem="dgD-e5-sJS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="106" id="qvU-kY-kuC"/>
+                            <constraint firstItem="RLB-EI-F3h" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="r2I-YZ-24T"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="340" y="429"/>
         </scene>
     </scenes>
 </document>
