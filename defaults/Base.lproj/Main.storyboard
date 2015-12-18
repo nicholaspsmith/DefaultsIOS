@@ -50,17 +50,32 @@
                                     <action selector="blue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hEi-hL-B7L"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color: Red" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gP8-E6-9og">
+                                <rect key="frame" x="209" y="37" width="182" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="9y7-gT-FlU"/>
+                                    <constraint firstAttribute="width" constant="182" id="YOK-RO-A4w"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="eQb-5t-yEw" firstAttribute="top" secondItem="RLB-EI-F3h" secondAttribute="bottom" constant="25" id="Ky0-1d-PQ0"/>
                             <constraint firstItem="RLB-EI-F3h" firstAttribute="top" secondItem="dgD-e5-sJS" secondAttribute="bottom" constant="24" id="SB5-R9-jFd"/>
                             <constraint firstItem="eQb-5t-yEw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VzI-8e-rc8"/>
+                            <constraint firstItem="gP8-E6-9og" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="17" id="dsi-VY-ipO"/>
+                            <constraint firstItem="gP8-E6-9og" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lWP-u4-4a9"/>
                             <constraint firstItem="dgD-e5-sJS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="q7M-vc-zyB"/>
                             <constraint firstItem="dgD-e5-sJS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="106" id="qvU-kY-kuC"/>
                             <constraint firstItem="RLB-EI-F3h" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="r2I-YZ-24T"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="favLabel" destination="gP8-E6-9og" id="9JL-Ow-MSL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
