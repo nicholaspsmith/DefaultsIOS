@@ -23,9 +23,12 @@ class Person: NSObject, NSCoding {
     
     required convenience init?(coder aDecoder: NSCoder) {
         self.init()
+        self.firstName = aDecoder.decodeObjectForKey("firstName") as? String
+        self.lastName = aDecoder.decodeObjectForKey("lastName") as? String
     }
     
     func encodeWithCoder(aCoder: NSCoder) {
-        
+        aCoder.encodeObject(self.firstName, forKey: "firstName")
+        aCoder.encodeObject(self.firstName, forKey: "lastName")
     }
 }

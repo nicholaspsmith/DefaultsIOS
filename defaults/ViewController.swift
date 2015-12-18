@@ -31,7 +31,9 @@ class ViewController: UIViewController {
         people.append(personB)
         people.append(personC)
         
-        NSUserDefaults.standardUserDefaults().setObject(people, forKey: "people")
+        let peopleData = NSKeyedArchiver.archivedDataWithRootObject(people)
+        
+        NSUserDefaults.standardUserDefaults().setObject(peopleData, forKey: "people")
         NSUserDefaults.standardUserDefaults().synchronize()
     }
 
