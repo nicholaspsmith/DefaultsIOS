@@ -9,6 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    //21:00
 
     @IBOutlet weak var favLabel: UILabel!
     
@@ -52,6 +54,16 @@ class ViewController: UIViewController {
         favLabel.text = "Favorite Color: Yellow"
         NSUserDefaults.standardUserDefaults().setValue("Yellow", forKey: "color")
         NSUserDefaults.standardUserDefaults().synchronize()
+        
+        if let loadedPeople = NSUserDefaults.standardUserDefaults().objectForKey("people") as? NSData {
+            
+            if let peopleArray = NSKeyedUnarchiver.unarchiveObjectWithData(loadedPeople) as? [Person] {
+                
+                for person in peopleArray {
+                    print(person.firstName)
+                }
+            }
+        }
     }
     
     @IBAction func blue(sender: AnyObject) {
